@@ -4,12 +4,12 @@ public class Bathroom extends Room {
 
 @Override
 public void printItems(){
-    int i;
-for (i = 0; i < items.length; i++){
-    System.out.println(items[i]);
+        int i;
+        for (i = 0; i < items.length; i++){
+        System.out.println(items[i]);
         }
-String s = String.valueOf(items[i]);
-      s.printItems();
-      System.out.println("Претметы в комнате " + room.name + ": " + items[i]);
+        String s = String.valueOf(items[i]);
+        s.printItems();
+        System.out.println("Претметы в комнате " + room.name + ": " + items[i]);
         }
         }
