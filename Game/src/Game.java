@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Game {
-    static boolean isGameFinished;
+    static boolean isGameFinished = false;
     Bedroom bedroom = new Bedroom();
     Bathroom bathroom = new Bathroom();
     Kitchen kitchen = new Kitchen();
@@ -22,7 +22,6 @@ public class Game {
     kitchen.setName("Кухня");
     kitchen.setDescription("Большая кухня с совмещенной столовой");
 
-
     Room[] r = new Room[]{bedroom, bathroom, kitchen};
 
     public int showMenu() {
@@ -36,8 +35,7 @@ public class Game {
     }
 
     public void showRooms() {
-        for (int i = 0; i < r.length; i++){
-            r[i].print();
+        for (int i = 0; i < r.length; i++) {
             System.out.println(r[i]);
         }
     }
@@ -50,17 +48,20 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         player.name = sc.nextLine();
 
-
         Room room = new Room();
 
-        for (; ;) {
-            if (a == 0){
-                this.showMenu();
-                System.out.println("Выйти из игры");
-            } else if (a == 1){
-                this.showRooms;
-            } else if (a == 2){
-                this.showItems();
+        while (true) {
+            Game g = new Game();
+            g.showMenu();
+            if ( int a == 0){
+                System.out.println(isGameFinished);
+            }
+            else if (int a == 1){
+                g.showRooms();
+            }
+
+            public void setRoom() {
+                g.showRooms();
             }
         }
     }

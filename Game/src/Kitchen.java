@@ -8,8 +8,7 @@ public class Kitchen extends Room {
                 for (i = 0; i < items.length; i++) {
                         System.out.println(items[i]);
                 }
-                String s2 = String.valueOf(items[i]);
-                s2.printItems();
-                System.out.println("Претметы в комнате " + room.name + ": " + items[i]);
+                printItems();
+                System.out.println("Претметы в комнате " + name + ": " + items[i]);
         }
 }
