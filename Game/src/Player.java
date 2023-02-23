@@ -5,12 +5,15 @@ public class Player {
 
     Room currentRoom = new Room();
 
-    public void setCurrentRoom (Room currentRoom) {
+    public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
         System.out.println("Вы перешли в комнату " + currentRoom);
     }
-        public void showItems (String inventory) {
-        this.inventory = inventory;
-            System.out.println(inventory);
+
+    public void showItems (Item[] items) {
+        for (int i = 0; i < items.length; i++) {
+            items[i].print();
+            System.out.println(items[i]);
         }
     }
+}
